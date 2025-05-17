@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Site de motivation islamique et de spiritualité pour surmonter les épreuves, booster la foi et créer son propre site." />
+  <meta name="keywords" content="motivation, islam, confiance, rappel, épreuves, foi, développement personnel, KhadimTech" />
+  <meta name="author" content="KhadimTech.SN" />
+  <title>Rappels & Élévation - KhadimTech.SN</title>
+  <style>
+    :root {
+      --main-color: #0f0f0f;
+      --secondary-color: #14532d;
+      --accent-color: #22c55e;
+      --text-color: #ffffff;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+    body {
+      background-color: var(--main-color);
+      color: var(--text-color);
+      overflow-x: hidden;
+    }
+    header {
+      background-color: var(--main-color);
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #1f1f1f;
+      position: relative;
+    }
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: var(--accent-color);
+    }
+    nav {
+      display: flex;
+      gap: 20px;
+    }
+    nav a {
+      color: var(--text-color);
+      text-decoration: none;
+      transition: 0.3s;
+    }
+    nav a:hover {
+      color: var(--accent-color);
+    }
+    .burger {
+      display: none;
+      font-size: 1.8rem;
+      color: var(--accent-color);
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+    .nav-mobile {
+      display: none;
+      flex-direction: column;
+      gap: 10px;
+      background-color: var(--main-color);
+      position: absolute;
+      top: 70px;
+      left: 0;
+      width: 100%;
+      padding: 20px;
+      border-top: 1px solid #1f1f1f;
+    }
+    .nav-mobile a {
+      color: var(--text-color);
+      text-decoration: none;
+      font-size: 1.1rem;
+    }
+
+    .hero {
+      background-color: var(--secondary-color);
+      padding: 80px 20px;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+    }
+    .hero button {
+      background-color: var(--accent-color);
+      color: var(--main-color);
+      border: none;
+      padding: 12px 30px;
+      border-radius: 5px;
+      font-weight: bold;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .hero button:hover {
+      opacity: 0.9;
+    }
+    .tabs {
+      max-width: 1000px;
+      margin: 60px auto;
+      padding: 20px;
+    }
+    .tab-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      margin-bottom: 30px;
+    }
+    .tab-buttons button {
+      background-color: var(--secondary-color);
+      border: 1px solid var(--accent-color);
+      color: var(--text-color);
+      padding: 10px 20px;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .tab-buttons button:hover {
+      background-color: var(--accent-color);
+      color: var(--main-color);
+    }
+    .tab-content {
+      display: none;
+      animation: fadeIn 0.5s ease-in;
+    }
+    .tab-content.active {
+      display: block;
+    }
+    .section {
+      margin-bottom: 40px;
+      text-align: center;
+    }
+    .section h2 {
+      color: var(--accent-color);
+      margin-bottom: 10px;
+    }
+    .section p {
+      max-width: 700px;
+      margin: auto;
+      line-height: 1.6;
+    }
+    .cta-section {
+      background-color: #1f1f1f;
+      padding: 60px 20px;
+      text-align: center;
+    }
+    .cta-section h2 {
+      color: var(--accent-color);
+      margin-bottom: 20px;
+    }
+    .cta-section p {
+      margin-bottom: 10px;
+    }
+    footer {
+      background-color: #111;
+      text-align: center;
+      padding: 15px;
+      font-size: 0.9rem;
+      color: #777;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        display: none;
+      }
+      .burger {
+        display: block;
+      }
+      .nav-mobile.show {
+        display: flex;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">KhadimTech.SN</div>
+    <nav class="nav-desktop">
+      <a href="#motivation">Motivation</a>
+      <a href="#site">Créer un site</a>
+    </nav>
+    <button class="burger" onclick="toggleMenu()">☰</button>
+    <div class="nav-mobile" id="nav-mobile">
+      <a href="#motivation" onclick="toggleMenu()">Motivation</a>
+      <a href="#site" onclick="toggleMenu()">Créer un site</a>
+    </div>
+  </header>
+
+  <section class="hero">
+    <h1>93 : 3 - Ton Seigneur ne t'a ni abandonné, ni détesté.</h1>
+    <p>Chaque jour est une opportunité de se rapprocher de ses objectifs et de s’élever.</p>
+    <button onclick="document.getElementById('site').scrollIntoView({behavior: 'smooth'});">Créer mon propre site</button>
+  </section>
+
+  <section class="tabs" id="motivation">
+    <div class="tab-buttons">
+      <button onclick="showTab('tab1')">Motivation</button>
+      <button onclick="showTab('tab2')">Rappel</button>
+      <button onclick="showTab('tab3')">Épreuves</button>
+      <button onclick="showTab('tab4')">Succès</button>
+    </div>
+    <div class="tab-content active" id="tab1">
+      <div class="section">
+        <h2>Motivation</h2>
+        <p>«La persévérance est la clé du succès. Ne laissez pas les obstacles vous arrêter, croyez en Allah et continuez fort.»</p>
+      </div>
+    </div>
+    <div class="tab-content" id="tab2">
+      <div class="section" id="rappel">
+        <h2>Rappel</h2>
+        <p>Un rappel sincère peut transformer un cœur égaré en âme guidée.</p>
+      </div>
+    </div>
+    <div class="tab-content" id="tab3">
+      <div class="section" id="epreuve">
+        <h2>Épreuves</h2>
+        <p>Les épreuves ne sont pas là pour te briser, mais pour te former à devenir plus fort et plus proche d’Allah.</p>
+      </div>
+    </div>
+    <div class="tab-content" id="tab4">
+      <div class="section" id="succes">
+        <h2>Succès</h2>
+        <p>« Réussira celui qui purifie son âme. » (Coran 91:9)</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section" id="site">
+    <h2>Créer ton propre site avec KhadimTech.SN</h2>
+    <p><strong>Site vitrine :</strong> 100.000 FCFA</p>
+    <p><strong>Avec base de données :</strong> 200.000 FCFA</p>
+    <p>💸 Paiement en tranches disponible</p>
+    <p>📞 +221 78 406 63 15</p>
+    <p>📧 kg4132920@gmail.com</p>
+  </section>
+
+  <footer>
+    &copy; 2025 KhadimTech.SN - Tous droits réservés
+  </footer>
+
+  <script>
+    function showTab(id) {
+      document.querySelectorAll('.tab-content').forEach(tab => tab.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+    }
+
+    function toggleMenu() {
+      const menu = document.getElementById('nav-mobile');
+      menu.classList.toggle('show');
+    }
+  </script>
+</body>
+</html>
